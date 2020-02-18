@@ -58,11 +58,12 @@
     </table>
     
     <a href="#popup">This is a popup link</a>
+    <input type="checkbox" id="close" name="close" />
     <div id="popup" class="modalDialog pop-up">
-           <div> <label href="#close" title="Close" class="close">X</label>
-             <a href="https://google.com">Link to elsewhere</a>
-           </div>
-      </div>
+	   <div> <label for="close" title="Close" class="closer">X</label>
+	     <a href="https://google.com">Link to elsewhere</a>
+	   </div>
+    </div>
 
       <style> .modalDialog {
          position: fixed;
@@ -88,7 +89,7 @@
           border-radius: 10px;
           background: #fff;
       }
-      .close {
+      .closer {
           background: #606061;
           color: #FFFFFF;
           line-height: 25px;
@@ -106,7 +107,7 @@
           -webkit-box-shadow: 1px 1px 3px #000;
           box-shadow: 1px 1px 3px #000;
       }
-      .close:hover {
+      .closer:hover {
           background: #00d9ff;
       }
       .noscroll { 
@@ -137,6 +138,18 @@
 	100% {
 		opacity: 1;
 	}
+}
+	      
+input[type="checkbox"] {
+	display: none;
+}
+	      
+input[type="checkbox"]:checked ~ div.pop-up {
+	display: none;
+}
+
+input[type="checkbox"]:checked ~ label {
+	display: none;
 }
 
 .pop-up {
