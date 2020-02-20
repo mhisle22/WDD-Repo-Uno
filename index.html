@@ -61,9 +61,9 @@
     <input type="checkbox" id="close" name="close" />
     <div id="popup" class="modalDialog pop-up">
 	   <div> <label for="close" title="Close" class="closer">X</label>
-	     <a href="https://google.com">Link to elsewhere</a>
 	     <br \>
-	     <p>Example text- presumably convincing you to click above link </p>
+	     <h2>Want to know how your business appears online?</h2>
+		<h3>Fill out this form to access our in depth listings scan.</h3>
 	     <div id="formPopup">
       <!-- SharpSpring Form for Popup test form- ask Mark  -->
       <script type="text/javascript">
@@ -177,10 +177,18 @@ input[type="checkbox"]:checked ~ label {
 	justify-content: center;
 	height: 0;
 	position: fixed;
-	overflow: hidden;
+	overflow-y: scroll;
 	width: 100%;
 	z-index: 30;
 }
+	      
+.pop-up h2 {
+	
+	      }
+	   
+#formPopup {
+	margin-top: 2vh;
+	      }
       </style>
     
   </body>
