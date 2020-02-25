@@ -61,11 +61,11 @@
     <input type="checkbox" id="close" name="close" />
     <div id="popup" class="modalDialog pop-up">
 	    <div>
-		    <label for="close" title="Close" class="closer">X</label>
+		    <label for="close" title="Close" class="closer popText">X</label>
 	    <br \>
-		   <h2>Want to know how your business appears online?</h2>
-		<h3>Fill out this form to access our in depth listings scan.</h3>
-		<hr> 
+		   <h2 class="popText">Want to know how your business appears online?</h2>
+		<h3 class="popText">Fill out this form to access our in depth listings scan.</h3>
+		<hr class="popText"> 
 	     <div id="formPopup">
       <!-- SharpSpring Form for Popup test form- ask Mark  -->
       <script type="text/javascript">
@@ -208,6 +208,12 @@ input[type="checkbox"]:checked ~ label {
     background-color:#fff;
     height:1px;
     width:75%;
+}
+	      
+.popText {
+    animation: show-text 1s ease 3.3s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
 }
 	      
 .popup img {
