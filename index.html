@@ -273,9 +273,15 @@
             
         }
         
-        @media only screen and (max-height:700px) {
+        @media only screen and (max-height:700px) and (max-width:420px){
             .modalDialog>div {
                 height: 85vh;   
+             }   
+        }
+        
+        @media only screen and (min-height:800px) and (max-width:420px){
+            .modalDialog>div {
+                height: 75vh;   
              }   
         }
     </style>
