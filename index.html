@@ -1,6 +1,24 @@
 <html>
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script>
+        var poppy = localStorage.getItem('popupFakeCookie');
+
+        if(!poppy){
+            function PopUp(){
+                $('#popup').fadeIn(500);
+            }
+
+            setTimeout(function(){
+                PopUp();
+            },5000); // 1000 to load it after 1 second from page load
+
+            $('.close-popup-btn').click(function() {
+                $('.popup').fadeOut(500);
+            });
+            localStorage.setItem('popupFakeCookie','true');
+        }
+    </script>
 <head>
 <body>
     <h1>Test</h1>
@@ -185,9 +203,9 @@
         }
 
         .pop-up {
-            animation: pop 0.8s ease 3s;
+            /*animation: pop 0.8s ease 3s;
             animation-iteration-count: 1;
-            animation-fill-mode: forwards;
+            animation-fill-mode: forwards;*/
             background-color: rgba(0, 0, 0, 0.8);
             display: flex;
             justify-content: center;
