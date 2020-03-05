@@ -4,6 +4,7 @@
     <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         var poppy = localStorage.getItem('popupFakeCookie');
+        poppy = false;
         if(!poppy){
             function PopUp(){
                 $('#popup').fadeIn(500);
@@ -12,7 +13,7 @@
                 PopUp();
             },4500); // 1000 to load it after 1 second from page load
 
-            $('.close-popup-btn').click(function() {
+            $('.closer').click(function() {
                 $('.popup').fadeOut(500);
             });
             localStorage.setItem('popupFakeCookie','true');
