@@ -13,7 +13,7 @@
                 PopUp();
             },4500); // 1000 to load it after 1 second from page load
 
-            $('.closer').click(function() {
+            $('#closeButton').click(function() {
                 $('#popup').fadeOut(500);
             });
             localStorage.setItem('popupFakeCookie','true');
@@ -82,7 +82,7 @@
     <input type="checkbox" id="close" name="close" />
     <div id="popup" class="modalDialog pop-up">
         <div>
-            <label for="close" title="Close" class="closer popText">X</label>
+            <label for="close" title="Close" class="closer popText" id="closeButton">X</label>
             <br \>
             <img src="if_logo.PNG">
             <h2 class="popText">Want to know how your business appears online?</h2>
