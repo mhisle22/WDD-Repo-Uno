@@ -14,6 +14,7 @@
             },4500); // 1000 to load it after 1 second from page load
 
             $('#closeButton').click(function() {
+                console.log("faded");
                 $('#popup').fadeOut(500);
             });
             localStorage.setItem('popupFakeCookie','true');
