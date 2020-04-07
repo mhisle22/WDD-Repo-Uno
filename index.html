@@ -30,9 +30,13 @@
   
     <a href="#popup">This is a popup link</a>
     <p class="cart-attribute__field">
-      <label for="required-what-day-and-time-would-you-like-to-pick-up-your-order">**Required** What day and time would you like to pick up your order?</label>
-      <input required class="required" id="required-what-day-and-time-would-you-like-to-pick-up-your-order" type="text" name="attributes[**Required** What day and time would you like to pick up your order?]" value="{{ cart.attributes["**Required** What day and time would you like to pick up your order?"] }}">
+      <label for="pick-up-time">**Required** What day and time would you like to pick up your order?</label>
+      <input required class="required" id="pick-up-time" type="text" name="attributes[**Required** What day and time would you like to pick up your order?]" value="{{ cart.attributes["**Required** What day and time would you like to pick up your order?"] }}">
     </p>
+	<p class="cart-attribute__field">
+	  <label for="any-additional-notes-we-might-need-to-complete-your-order">Any additional notes we might need to complete your order?</label>
+	  <input required class="required" id="any-additional-notes-we-might-need-to-complete-your-order" type="text" name="attributes[Any additional notes we might need to complete your order?]" value="{{ cart.attributes["Any additional notes we might need to complete your order?"] }}">
+	</p>
     <input type="checkbox" id="close" name="close" />
     <div id="popup" class="modalDialog pop-up">
         <div>
@@ -61,14 +65,13 @@
 
     <script>
 
-        $('#demo').datetimepicker({
+        $('#pick-up-time').datetimepicker({
         inline:false,
         format:	'D m/d/y g:ia',
 	formatTime: 'g:ia',
 	formatDate: 'D m/d/y',
-        minDate: '+1970/01/02',
+        minDate: '+1970/01/02', //translation: only one day forward
         step:15});
-        //$('#demo').datetimepicker('toggle');
     </script>
     
     <style>
