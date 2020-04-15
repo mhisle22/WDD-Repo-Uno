@@ -32,6 +32,7 @@
     <p class="cart-attribute__field">
       <label for="pick-up-time">**Required** What day and time would you like to pick up your order? For delivery, we deliver between 11AM and 4PM.</label>
       <input required autocomplete="off" class="required" id="pick-up-time" type="text" name="attributes[**Required** What day and time would you like to pick up your order?]" value="">
+      <i class="icon-calendar"></i>
     </p>
     <p class="cart-attribute__field">
 	<label for="any-additional-notes-we-might-need-to-complete-your-order">Please include any additional notes we might need to complete your order, including the message on the cake.</label>
@@ -64,24 +65,6 @@
     </div>
 
     <script type="text/javascript">
-        /*$('#pick-up-time').datetimepicker({
-        inline:false,
-        format:	'D m/d/y g:i', //add "a" to the end to display am or pm
-	formatTime: 'g:i',
-	formatDate: 'D m/d/y',
-        minDate: '+1970/01/02', //translation: only one day forward
-	allowTimes:[
-	  '10:00am', '10:15am', '10:30am', '10:45am', 
-	  '11:00am', '11:15am', '11:30am', '11:45am',
-	  '12:00pm', '12:15pm', '12:30pm', '12:45pm',
-	  '1:00pm', '1:15pm', '1:30pm', '1:45pm',
-	  '2:00pm', '2:15pm', '2:30pm', '2:45pm',
-	  '3:00pm', '3:15pm', '3:30pm', '3:45pm',
-	  '4:00pm', '4:15pm', '4:30pm', '4:45pm',
-	  '5:00pm', '5:15pm', '5:30pm', '3:45pm',
-	  '6:00pm'
-	 ],
-        step:15});*/
 	$('#pick-up-time').flatpickr({
 	enableTime: true,
 	minTime: "10:00",
