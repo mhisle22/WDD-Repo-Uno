@@ -1,9 +1,9 @@
 <html>
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="stylesheet" type="text/css" href="jquery.datetimepicker.css"/>
     <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="jquery.datetimepicker.full.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         var poppy = localStorage.getItem('popupFakeCookie');
         if(!poppy){
@@ -64,7 +64,7 @@
     </div>
 
     <script type="text/javascript">
-        $('#pick-up-time').datetimepicker({
+        /*$('#pick-up-time').datetimepicker({
         inline:false,
         format:	'D m/d/y g:i', //add "a" to the end to display am or pm
 	formatTime: 'g:i',
@@ -81,7 +81,8 @@
 	  '5:00pm', '5:15pm', '5:30pm', '3:45pm',
 	  '6:00pm'
 	 ],
-        step:15});
+        step:15});*/
+	$('#pick-up-time').flatpickr();
     </script>
     
     <style>
