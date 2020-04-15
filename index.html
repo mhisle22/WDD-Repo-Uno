@@ -86,7 +86,7 @@
 	enableTime: true,
 	minTime: "10:00",
     	maxTime: "18:00",
-	minDate: "tomorrow",
+	minDate: new Date().fp_incr(1), //translation: tomorrow
 	altInput: true
 	
 	});
