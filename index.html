@@ -82,7 +82,13 @@
 	  '6:00pm'
 	 ],
         step:15});*/
-	$('#pick-up-time').flatpickr();
+	$('#pick-up-time').flatpickr({
+	enableTime: true,
+	minTime: "10:00",
+    	maxTime: "18:00",
+	minDate: "today"
+	
+	});
     </script>
     
     <style>
